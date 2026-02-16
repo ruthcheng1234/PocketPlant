@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Plant - Privacy Policy & Terms of Use</title>
+    <style>
+        :root {
+            --green-50: #f0fdf4;
+            --green-100: #dcfce7;
+            --green-200: #bbf7d0;
+            --green-400: #4ade80;
+            --green-500: #22c55e;
+            --green-600: #16a34a;
+            --green-700: #15803d;
+            --green-800: #166534;
+            --green-900: #14532d;
+            --stone-50: #fafaf9;
+            --stone-100: #f5f5f4;
+            --stone-200: #e7e5e4;
+            --stone-300: #d6d3d1;
+            --stone-500: #78716c;
+            --stone-600: #57534e;
+            --stone-700: #44403c;
+            --stone-800: #292524;
+            --stone-900: #1c1917;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--stone-50);
+            color: var(--stone-800);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--green-700), var(--green-500));
+            color: white;
+            text-align: center;
+            padding: 3rem 1.5rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            position: relative;
+        }
+
+        header .plant-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        nav {
+            background: white;
+            border-bottom: 1px solid var(--stone-200);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        nav .nav-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0;
+        }
+
+        nav a {
+            flex: 1;
+            text-align: center;
+            padding: 0.85rem 1rem;
+            text-decoration: none;
+            color: var(--stone-600);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s, border-color 0.2s;
+            border-bottom: 2.5px solid transparent;
+        }
+
+        nav a:hover {
+            color: var(--green-700);
+        }
+
+        nav a.active {
+            color: var(--green-700);
+            border-bottom-color: var(--green-500);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .page-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--green-800);
+            margin-bottom: 0.25rem;
+        }
+
+        .effective-date {
+            font-size: 0.9rem;
+            color: var(--stone-500);
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--stone-200);
+        }
+
+        .intro {
+            font-size: 1rem;
+            color: var(--stone-700);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--green-800);
+            margin-top: 2.25rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2 .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.75rem;
+            height: 1.75rem;
+            background: var(--green-100);
+            color: var(--green-700);
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--stone-700);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p, li {
+            font-size: 0.95rem;
+            color: var(--stone-700);
+            margin-bottom: 0.6rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--stone-200);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            background: var(--green-50);
+            border-left: 3px solid var(--green-400);
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+        }
+
+        .highlight p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-box {
+            background: white;
+            border: 1px solid var(--stone-200);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .contact-box .label {
+            font-size: 0.85rem;
+            color: var(--stone-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-box .value {
+            font-size: 1rem;
+            color: var(--stone-800);
+            font-weight: 500;
+        }
+
+        .contact-box a {
+            color: var(--green-600);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-row > div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .subscription-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.75rem 0;
+        }
+
+        .subscription-table th,
+        .subscription-table td {
+            padding: 0.6rem 1rem;
+            text-align: left;
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--stone-200);
+        }
+
+        .subscription-table th {
+            background: var(--green-50);
+            color: var(--green-800);
+            font-weight: 600;
+        }
+
+        .subscription-table td {
+            color: var(--stone-700);
+        }
+
+        .eula-link {
+            color: var(--green-600);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .eula-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            color: var(--stone-500);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--stone-200);
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 2rem 1.25rem 1.75rem;
+            }
+            header h1 {
+                font-size: 1.6rem;
+            }
+            main {
+                padding: 1.5rem 1.25rem 3rem;
+            }
+            .page-title {
+                font-size: 1.35rem;
+            }
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.75rem 0.5rem;
+            }
+            .contact-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <span class="plant-icon">🌱</span>
+    <h1>Pocket Plant</h1>
+    <p>Legal Information</p>
+</header>
+
+<nav>
+    <div class="nav-inner">
+        <a href="#privacy" class="active" onclick="showSection('privacy')">隱私權政策 Privacy Policy</a>
+        <a href="#terms" onclick="showSection('terms')">使用條款 Terms of Use</a>
+    </div>
+</nav>
+
+<main>
+
+    <!-- Privacy Policy -->
+    <div id="privacy" class="section active">
+        <h1 class="page-title">Pocket Plant 隱私權政策</h1>
+        <p class="effective-date">生效日期：2026 年 2 月 16 日</p>
+
+        <p class="intro">
+            Cheng Pui Ying（以下簡稱「開發者」或「我們」）致力於保護您的隱私。本隱私權政策說明了 Pocket Plant 應用程式（以下簡稱「本應用」）如何收集、使用及揭露您的資訊。
+        </p>
+        <p class="intro">
+            當您下載或使用本應用，即代表您同意本隱私權政策的條款。
+        </p>
+
+        <h2><span class="num">1</span> 我們收集的資訊與用途</h2>
+        <p>為了提供遊戲的核心功能（如天氣同步、植物生長機制），我們可能會要求存取以下權限：</p>
+
+        <h3>1.1 地理位置資訊 (Location Data)</h3>
+        <div class="card">
+            <p><strong>收集內容：</strong>我們會請求存取您的概略位置或精確位置。</p>
+            <p><strong>用途：</strong>此資訊僅用於獲取您當地的即時天氣數據（例如：是否下雨、日照強度）。這些天氣數據會直接影響遊戲中植物的生長狀態與靈動島（Dynamic Island）的視覺效果。</p>
+            <p><strong>資料處理：</strong>您的位置資訊僅在應用程式運行期間於本機端 (Local Device) 處理，或傳送至天氣服務提供商（如 Apple WeatherKit）以獲取天氣資訊。我們不會儲存您的位置歷史記錄，亦不會將其用於廣告追蹤或出售給第三方。</p>
+        </div>
+
+        <h3>1.2 使用數據 (Usage Data)</h3>
+        <div class="card">
+            <p>我們會收集非個人識別的技術數據（如裝置型號、iOS 版本、崩潰報告），這些數據由 Apple 提供，僅用於改善應用程式的穩定性與修復錯誤。</p>
+        </div>
+
+        <h2><span class="num">2</span> 第三方服務</h2>
+        <p>本應用可能包含由第三方提供的服務（如天氣數據 API）。這些第三方服務可能會根據其自身的隱私權政策處理數據。</p>
+        <div class="highlight">
+            <p><strong>Apple WeatherKit / Open-Meteo：</strong>用於提供天氣資訊。</p>
+        </div>
+
+        <h2><span class="num">3</span> 資料存儲與安全</h2>
+        <div class="card">
+            <p><strong>本地存儲：</strong>Pocket Plant 是一款以本地端為主的應用程式。您的植物狀態、遊戲進度與偏好設定均儲存於您的裝置上（透過 UserDefaults 或 CoreData）。</p>
+            <p><strong>無後端伺服器：</strong>作為個人開發者，我們並未架設私人伺服器來收集或儲存您的個人資料。</p>
+        </div>
+
+        <h2><span class="num">4</span> 兒童隱私</h2>
+        <p>本應用不針對 13 歲以下的兒童進行行銷，亦不會有意收集兒童的個人資訊。</p>
+
+        <h2><span class="num">5</span> 您的權利</h2>
+        <p>您可以隨時透過 iOS 系統設定（<strong>設定 &gt; 隱私權 &gt; 定位服務</strong>）撤銷本應用對您位置資訊的存取權。若您刪除本應用，儲存於裝置上的所有遊戲數據將一併被刪除。</p>
+
+        <h2><span class="num">6</span> 政策變更</h2>
+        <p>我們可能會不時更新本隱私權政策。建議您定期查看本頁面以了解任何變更。變更後的政策一經發布即刻生效。</p>
+
+        <h2><span class="num">7</span> 聯絡我們</h2>
+        <p>如果您對本隱私權政策有任何疑問，請聯絡開發者：</p>
+        <div class="contact-box">
+            <div class="contact-row">
+                <div>
+                    <p class="label">開發者</p>
+                    <p class="value">Cheng Pui Ying</p>
+                </div>
+                <div>
+                    <p class="label">Email</p>
+                    <p class="value"><a href="mailto:chengoffice18@gmail.com">chengoffice18@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Use -->
+    <div id="terms" class="section">
+        <h1 class="page-title">Pocket Plant 使用條款</h1>
+        <p class="effective-date">最後更新：2026 年 2 月 16 日</p>
+
+        <p class="intro">
+            歡迎使用由 Cheng Pui Ying 開發的 Pocket Plant。下載或使用本應用程式，即表示您同意受以下條款約束。
+        </p>
+
+        <h2><span class="num">1</span> 授權範圍</h2>
+        <p>本應用程式授權您進行非商業性的個人使用。本應用的所有權利（包括但不限於像素藝術、程式碼、設計）均歸 Cheng Pui Ying 所有。</p>
+
+        <h2><span class="num">2</span> 訂閱服務 (Subscription)</h2>
+        <p>Pocket Plant 提供自動續訂的訂閱服務以解鎖進階功能（如額外的植物種類）。</p>
+
+        <div class="card">
+            <table class="subscription-table">
+                <thead>
+                    <tr>
+                        <th>訂閱項目</th>
+                        <th>價格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Premium Unlock (每月)</td>
+                        <td>$1.49 USD / 月</td>
+                    </tr>
+                    <tr>
+                        <td>Premium Unlock (每年)</td>
+                        <td>$9.99 USD / 年</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.85rem; color:var(--stone-500); margin-top:0.5rem;">實際價格可能因地區貨幣匯率而異。</p>
+        </div>
+
+        <ul>
+            <li><strong>付款：</strong>確認購買後，費用將從您的 Apple ID 帳戶中扣除。</li>
+            <li><strong>自動續訂：</strong>除非在當前訂閱期結束前至少 24 小時關閉自動續訂，否則訂閱將自動續訂。您的帳戶將在當前期間結束前 24 小時內被收取續訂費用。</li>
+            <li><strong>管理訂閱：</strong>您可以在購買後前往 App Store 的「帳戶設定」管理或取消您的訂閱。</li>
+            <li><strong>免費試用：</strong>如果提供免費試用期，任何未使用的部分將在您購買訂閱時失效。</li>
+        </ul>
+
+        <h2><span class="num">3</span> 免責聲明 (Disclaimer)</h2>
+        <div class="card">
+            <p><strong>服務現狀：</strong>本應用程式按「現狀 (As-Is)」提供。開發者不保證應用程式將完全無誤、不中斷，或天氣數據百分之百準確。</p>
+            <p><strong>虛擬物品：</strong>應用程式內的植物為虛擬物品，無實際金錢價值。若因應用程式錯誤或刪除應用導致數據丟失，開發者不承擔恢復責任。</p>
+        </div>
+
+        <h2><span class="num">4</span> 責任限制</h2>
+        <p>在法律允許的最大範圍內，Cheng Pui Ying 不對因使用或無法使用本應用程式而導致的任何直接、間接或附帶損害負責。</p>
+
+        <h2><span class="num">5</span> 法律適用</h2>
+        <p>本條款受<strong>香港特別行政區 (Hong Kong SAR)</strong> 法律管轄。</p>
+
+        <h2><span class="num">6</span> Apple 標準授權協議</h2>
+        <p>除上述條款外，本應用程式亦受 Apple 的標準終端使用者授權協議 (EULA) 約束：</p>
+        <div class="highlight">
+            <p><a class="eula-link" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Cheng Pui Ying. All rights reserved. — Pocket Plant</p>
+</footer>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        document.querySelector('nav a[href="#' + id + '"]').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Handle direct URL hash navigation
+    if (window.location.hash === '#terms') {
+        showSection('terms');
+    }
+</script>
+
+</body>
+</html>
